@@ -12,9 +12,11 @@ const Entry = db.define('entry', {
   location: {
     type: Sequelize.STRING,
   },
+  type: {
+    type: Sequelize.ENUM('boulder', 'sport'),
+  },
   date: {
     type: Sequelize.DATEONLY,
-    allowNull: false,
   },
   sportRedPoint: {
     type: Sequelize.ENUM(
@@ -24,7 +26,7 @@ const Entry = db.define('entry', {
       '5.9',
       '5.10',
       '5.11',
-      '5,12',
+      '5.12',
       '5.13',
       '5.14+'
     ),
@@ -52,7 +54,7 @@ const Entry = db.define('entry', {
       '5.9',
       '5.10',
       '5.11',
-      '5,12',
+      '5.12',
       '5.13',
       '5.14+'
     ),
@@ -105,7 +107,6 @@ const Entry = db.define('entry', {
   },
   minutes: {
     type: Sequelize.INTEGER,
-    allowNull: false,
   },
 });
 

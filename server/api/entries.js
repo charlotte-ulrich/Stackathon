@@ -3,7 +3,7 @@ const User = require('../db/models/user');
 const Entry = require('../db/models/entry');
 const requireToken = require('../auth/middlewares');
 
-router.get('/:userId', requireToken, async (req, res, next) => {
+router.get('/:userId', async (req, res, next) => {
   try {
     const { userId } = req.params;
     const allEntries = await Entry.findAll({
@@ -17,7 +17,7 @@ router.get('/:userId', requireToken, async (req, res, next) => {
   }
 });
 
-router.get('/:userId/:entryId', requireToken, async (req, res, next) => {
+router.get('/:userId/:entryId', async (req, res, next) => {
   try {
     const { userId } = req.params;
     const { entryId } = req.params;
@@ -36,11 +36,13 @@ router.get('/:userId/:entryId', requireToken, async (req, res, next) => {
 router.post('/:userId', async (req, res, next) => {
   try {
     const { userId } = req.params;
-    const newEntry = await Entry.create(req.body, {
+    console.log(req.body);
+    const newEntry = await Entry.build(req.body, {
       where: {
         userId,
       },
     });
+    await newEntry.save();
     const returnedEntry = newEntry.toJSON();
     res.json(returnedEntry);
   } catch (err) {
@@ -48,7 +50,7 @@ router.post('/:userId', async (req, res, next) => {
   }
 });
 
-router.put('/:userId/:entryId', requireToken, async (req, res, next) => {
+router.put('/:userId/:entryId', async (req, res, next) => {
   try {
     const { userId } = req.params;
     const { entryId } = req.params;
@@ -58,13 +60,14 @@ router.put('/:userId/:entryId', requireToken, async (req, res, next) => {
         userId,
       },
     });
-    res.json(oneEntry);
+    await oneEntry.update(req.body);
+    res.send(oneEntry);
   } catch (err) {
     next(err);
   }
 });
 
-router.delete('/:userId/:entryId', requireToken, async (req, res, next) => {
+router.delete('/:userId/:entryId', async (req, res, next) => {
   try {
     const { userId } = req.params;
     const { entryId } = req.params;

@@ -23,6 +23,7 @@ const entries = [
     title: 'Crushed it',
     notes: 'Finally finished my project',
     location: 'First Ascent Avondale',
+    type: 'sport',
     date: '2020-12-12',
     sportRedPoint: '5.11',
     sportOnSite: '5.10',
@@ -35,6 +36,7 @@ const entries = [
     title: 'Getting back into it',
     notes: 'Back in the gym after a break',
     location: 'First Ascent Humboldt Park',
+    type: 'boulder',
     date: '2021-04-04',
     boulderRedPoint: 'V2',
     boulderOnSite: 'V2',
@@ -46,6 +48,7 @@ const entries = [
   {
     notes: 'Normal day',
     location: 'First Ascent Humboldt Park',
+    type: 'boulder',
     date: '2021-04-04',
     boulderRedPoint: 'V3',
     boulderOnSite: 'V2',
@@ -57,6 +60,7 @@ const entries = [
   {
     title: 'Back outside!',
     location: 'The Red',
+    type: 'sport',
     date: '2020-08-06',
     sportRedPoint: '5.10',
     sportOnSite: '5.9',
@@ -69,6 +73,7 @@ const entries = [
     title: 'Slow and Steady',
     notes: 'Working on getting my finger strength back',
     location: 'First Ascent Avondale',
+    type: 'sport',
     date: '2020-11-30',
     sportRedPoint: '5.10',
     sportOnSite: '5.9',
@@ -80,6 +85,7 @@ const entries = [
   {
     title: 'Sunny day',
     location: 'Brooklyn Boulders',
+    type: 'boulder',
     date: '2021-01-12',
     boulderRedPoint: 'V4',
     boulderOnSite: 'V4',
@@ -91,6 +97,7 @@ const entries = [
   {
     notes: 'Fun w/ pals',
     location: 'First Ascent Avondale',
+    type: 'sport',
     date: '2020-12-12',
     sportRedPoint: '5.10',
     sportOnSite: '5.10',
