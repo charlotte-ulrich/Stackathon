@@ -19,88 +19,29 @@ const Entry = db.define('entry', {
     type: Sequelize.DATEONLY,
   },
   sportRedPoint: {
-    type: Sequelize.ENUM(
-      '5.6',
-      '5.7',
-      '5.8',
-      '5.9',
-      '5.10',
-      '5.11',
-      '5.12',
-      '5.13',
-      '5.14+'
-    ),
+    type: Sequelize.FLOAT,
+    // min/max and set interval for numbers
+    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
   },
   boulderRedPoint: {
-    type: Sequelize.ENUM(
-      'V0',
-      'V1',
-      'V2',
-      'V3',
-      'V4',
-      'V5',
-      'V6',
-      'V7',
-      'V8',
-      'V9',
-      'V10+'
-    ),
+    type: Sequelize.INTEGER,
+    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   sportOnSite: {
-    type: Sequelize.ENUM(
-      '5.6',
-      '5.7',
-      '5.8',
-      '5.9',
-      '5.10',
-      '5.11',
-      '5.12',
-      '5.13',
-      '5.14+'
-    ),
+    type: Sequelize.FLOAT,
+    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
   },
   boulderOnSite: {
-    type: Sequelize.ENUM(
-      'V0',
-      'V1',
-      'V2',
-      'V3',
-      'V4',
-      'V5',
-      'V6',
-      'V7',
-      'V8',
-      'V9',
-      'V10+'
-    ),
+    type: Sequelize.INTEGER,
+    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   sportProject: {
-    type: Sequelize.ENUM(
-      '5.6',
-      '5.7',
-      '5.8',
-      '5.9',
-      '5.10',
-      '5.11',
-      '5.12',
-      '5.13',
-      '5.14+'
-    ),
+    type: Sequelize.FLOAT,
+    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
   },
   boulderProject: {
-    type: Sequelize.ENUM(
-      'V0',
-      'V1',
-      'V2',
-      'V3',
-      'V4',
-      'V5',
-      'V6',
-      'V7',
-      'V8',
-      'V9',
-      'V10+'
-    ),
+    type: Sequelize.INTEGER,
+    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   shoes: {
     type: Sequelize.STRING,
