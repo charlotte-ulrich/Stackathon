@@ -36,13 +36,8 @@ router.get('/:userId/:entryId', async (req, res, next) => {
 router.post('/:userId', async (req, res, next) => {
   try {
     const { userId } = req.params;
-    console.log(req.body);
-    const newEntry = await Entry.build(req.body, {
-      where: {
-        userId,
-      },
-    });
-    await newEntry.save();
+    const newEntry = await Entry.create(req.body);
+    await newEntry.setUser(userId);
     const returnedEntry = newEntry.toJSON();
     res.json(returnedEntry);
   } catch (err) {
