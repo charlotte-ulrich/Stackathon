@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -16,6 +21,94 @@ nav a {
 }
 
 form div {
-  margin: 1em;
   display: inline-block;
 }
+
+/* AUTH FORM */
+
+/* NAVBAR */
+
+/* HOME PAGE */
+
+.banner {
+  width: 100%;
+  background-image: url('https://repicjourney.com/wp-content/uploads/2014/06/Yosemite-Banner.jpg');
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.hero-text {
+  color: white;
+  padding: 10px;
+  width: 100%;
+  float: left;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  width: 640px;
+  position: relative;
+  margin: 80px 0 20px 60px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  width: 640px;
+  position: relative;
+  margin: 40px 0 30px 60px;
+  line-height: 25px;
+}
+
+.main-cta {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 40px 0 30px 60px;
+}
+
+.definition-container {
+  background: rgb(69, 167, 170);
+  height: 550px;
+}
+
+.definition-text {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.home-image {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.image-block {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+/* .home-image {
+  background: #fff999;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+} */
