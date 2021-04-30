@@ -9,6 +9,7 @@ import history from './history';
 import SingleEntry from './components/SingleEntry';
 import EditEntry from './components/EditEntry';
 import CreateEntry from './components/CreateEntry';
+import Stats from './components/Stats';
 
 /**
  * COMPONENT
@@ -29,6 +30,7 @@ class Routes extends Component {
                 <Route exact path="/" component={Home} />
                 {/* <Redirect to="/" /> */}
                 <Route exact path="/journal/:userId" component={AllEntries} />
+                <Route exact path="/journal/:userId/stats" component={Stats} />
                 <Route
                   exact
                   path="/journal/:userId/new-entry"
