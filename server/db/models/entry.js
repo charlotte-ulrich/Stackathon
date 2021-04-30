@@ -19,29 +19,23 @@ const Entry = db.define('entry', {
     type: Sequelize.DATEONLY,
   },
   sportRedPoint: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.FLOAT(3, 2),
     // min/max and set interval for numbers
-    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
   },
   boulderRedPoint: {
     type: Sequelize.INTEGER,
-    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   sportOnSite: {
-    type: Sequelize.FLOAT,
-    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
+    type: Sequelize.FLOAT(3, 2),
   },
   boulderOnSite: {
     type: Sequelize.INTEGER,
-    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   sportProject: {
-    type: Sequelize.FLOAT,
-    // type: Sequelize.ENUM([6, 7, 8, 9, 10, 11, 12, 13, 14]),
+    type: Sequelize.FLOAT(3, 2),
   },
   boulderProject: {
     type: Sequelize.INTEGER,
-    // type: Sequelize.ENUM([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   },
   shoes: {
     type: Sequelize.STRING,

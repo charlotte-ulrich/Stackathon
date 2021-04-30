@@ -8,24 +8,50 @@ const Navbar = ({ handleClick, isLoggedIn, userId }) => (
     <nav>
       {isLoggedIn ? (
         <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/">Home</Link>
-          <a href={`/journal/${userId}`}>Journal</a>
-          <a href={`/journal/${userId}/new-entry`}>New Entry</a>
-          <a href="/" onClick={handleClick}>
-            Logout
-          </a>
+          <div className="navbar">
+            <div className="nav-home">
+              <a href={`/`}>Home</a>
+            </div>
+            <nav>
+              <ul className="nav-links">
+                <li>
+                  <a href={`/journal/${userId}`}>Journal</a>
+                </li>
+                <li>
+                  <a href={`/journal/${userId}/new-entry`}>New Entry</a>
+                </li>
+                <li>
+                  <a href={`/journal/${userId}/stats`}>Stats</a>
+                </li>
+                <li>
+                  <a href="/" onClick={handleClick}>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       ) : (
         <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+          <div className="navbar">
+            <div className="nav-home">
+              <a href={`/`}>Home</a>
+            </div>
+            <nav>
+              <ul className="nav-links">
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li>
+                  <Link to="/signup">Sign Up</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       )}
     </nav>
-    <hr />
   </div>
 );
 

@@ -87,17 +87,17 @@ export class EditEntry extends React.Component {
                   value={boulderRedPoint}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="V0">V0</option>
-                  <option value="V1">V1</option>
-                  <option value="V2">V2</option>
-                  <option value="V3">V3</option>
-                  <option value="V4">V4</option>
-                  <option value="V5">V5</option>
-                  <option value="V6">V6</option>
-                  <option value="V7">V7</option>
-                  <option value="V8">V8</option>
-                  <option value="V9">V9</option>
-                  <option value="V10+">V10+</option>
+                  <option value="0">V0</option>
+                  <option value="1">V1</option>
+                  <option value="2">V2</option>
+                  <option value="3">V3</option>
+                  <option value="4">V4</option>
+                  <option value="5">V5</option>
+                  <option value="6">V6</option>
+                  <option value="7">V7</option>
+                  <option value="8">V8</option>
+                  <option value="9">V9</option>
+                  <option value="10">V10+</option>
                 </select>
               </p>
               <p>
@@ -108,17 +108,17 @@ export class EditEntry extends React.Component {
                   value={boulderOnSite}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="V0">V0</option>
-                  <option value="V1">V1</option>
-                  <option value="V2">V2</option>
-                  <option value="V3">V3</option>
-                  <option value="V4">V4</option>
-                  <option value="V5">V5</option>
-                  <option value="V6">V6</option>
-                  <option value="V7">V7</option>
-                  <option value="V8">V8</option>
-                  <option value="V9">V9</option>
-                  <option value="V10+">V10+</option>
+                  <option value="0">V0</option>
+                  <option value="1">V1</option>
+                  <option value="2">V2</option>
+                  <option value="3">V3</option>
+                  <option value="4">V4</option>
+                  <option value="5">V5</option>
+                  <option value="6">V6</option>
+                  <option value="7">V7</option>
+                  <option value="8">V8</option>
+                  <option value="9">V9</option>
+                  <option value="10">V10+</option>
                 </select>
               </p>
               <p>
@@ -129,17 +129,17 @@ export class EditEntry extends React.Component {
                   value={boulderProject}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="V0">V0</option>
-                  <option value="V1">V1</option>
-                  <option value="V2">V2</option>
-                  <option value="V3">V3</option>
-                  <option value="V4">V4</option>
-                  <option value="V5">V5</option>
-                  <option value="V6">V6</option>
-                  <option value="V7">V7</option>
-                  <option value="V8">V8</option>
-                  <option value="V9">V9</option>
-                  <option value="V10+">V10+</option>
+                  <option value="0">V0</option>
+                  <option value="1">V1</option>
+                  <option value="2">V2</option>
+                  <option value="3">V3</option>
+                  <option value="4">V4</option>
+                  <option value="5">V5</option>
+                  <option value="6">V6</option>
+                  <option value="7">V7</option>
+                  <option value="8">V8</option>
+                  <option value="9">V9</option>
+                  <option value="10">V10+</option>
                 </select>
               </p>
             </div>
@@ -161,7 +161,7 @@ export class EditEntry extends React.Component {
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>
                   <option value="5.13">5.13</option>
-                  <option value="5.14+">5.14+</option>
+                  <option value="5.14">5.14+</option>
                 </select>
               </p>
               <p>
@@ -180,7 +180,7 @@ export class EditEntry extends React.Component {
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>
                   <option value="5.13">5.13</option>
-                  <option value="5.14+">5.14+</option>
+                  <option value="5.14">5.14+</option>
                 </select>
               </p>
               <p>
@@ -199,7 +199,7 @@ export class EditEntry extends React.Component {
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>
                   <option value="5.13">5.13</option>
-                  <option value="5.14+">5.14+</option>
+                  <option value="5.14">5.14+</option>
                 </select>
               </p>
             </div>

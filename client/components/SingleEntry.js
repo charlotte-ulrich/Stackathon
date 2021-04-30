@@ -46,9 +46,9 @@ export class SingleEntry extends React.Component {
               {entry.type === 'boulder' ? (
                 <div>
                   <ul>
-                    <li>Red Point: {entry.boulderRedPoint}</li>
-                    <li>On site: {entry.boulderOnsite}</li>
-                    <li>Project: {entry.boulderProject}</li>
+                    <li>Red Point: V{entry.boulderRedPoint}</li>
+                    <li>On site: V{entry.boulderOnSite}</li>
+                    <li>Project: V{entry.boulderProject}</li>
                   </ul>
                 </div>
               ) : (
