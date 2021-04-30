@@ -7,7 +7,7 @@ export class CreateEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      title: 'Climbing Session',
       minutes: 0,
       location: '',
       type: 'sport',
@@ -34,6 +34,7 @@ export class CreateEntry extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.createEntry(this.props.userId, { ...this.state });
+    this.props.history.push(`/journal/${this.props.userId}`);
   }
 
   render() {
