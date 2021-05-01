@@ -55,8 +55,8 @@ export class CreateEntry extends React.Component {
     } = this.state;
     const { handleSubmit, handleChange } = this;
     return (
-      <div>
-        <h3>New Entry</h3>
+      <div className="create-entry-page">
+        <h1 className="page-title">New Entry</h1>
         <form id="newEntry" onSubmit={handleSubmit}>
           <label>Entry Title:</label>
           <input name="title" onChange={handleChange} value={title} />
@@ -79,7 +79,12 @@ export class CreateEntry extends React.Component {
           </p>
           <p>
             <label>Type:</label>
-            <select name="type" onChange={handleChange} value={type}>
+            <select
+              className="custom-select"
+              name="type"
+              onChange={handleChange}
+              value={type}
+            >
               <option value="sport">Sport</option>
               <option value="boulder">Bouldering</option>
             </select>
@@ -89,6 +94,7 @@ export class CreateEntry extends React.Component {
               <p>
                 <label>Boulder Red Point:</label>
                 <select
+                  className="custom-select"
                   name="boulderRedPoint"
                   onChange={handleChange}
                   value={boulderRedPoint}
@@ -108,8 +114,9 @@ export class CreateEntry extends React.Component {
                 </select>
               </p>
               <p>
-                <label>Boulder OnSite:</label>
+                <label>Boulder On-Site:</label>
                 <select
+                  className="custom-select"
                   name="boulderOnSite"
                   onChange={handleChange}
                   value={boulderOnSite}
@@ -131,6 +138,7 @@ export class CreateEntry extends React.Component {
               <p>
                 <label>Boulder Project:</label>
                 <select
+                  className="custom-select"
                   name="boulderProject"
                   onChange={handleChange}
                   value={boulderProject}
@@ -155,6 +163,7 @@ export class CreateEntry extends React.Component {
               <p>
                 <label>Sport Red Point:</label>
                 <select
+                  className="custom-select"
                   name="sportRedPoint"
                   onChange={handleChange}
                   value={sportRedPoint}
@@ -172,8 +181,9 @@ export class CreateEntry extends React.Component {
                 </select>
               </p>
               <p>
-                <label>Sport OnSite:</label>
+                <label>Sport On-Site:</label>
                 <select
+                  className="custom-select"
                   name="sportOnSite"
                   onChange={handleChange}
                   value={sportOnSite}
@@ -193,6 +203,7 @@ export class CreateEntry extends React.Component {
               <p>
                 <label>Sport Project:</label>
                 <select
+                  className="custom-select"
                   name="sportProject"
                   onChange={handleChange}
                   value={sportProject}

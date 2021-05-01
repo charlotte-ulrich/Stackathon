@@ -37,15 +37,15 @@ export class SingleEntry extends React.Component {
     const { userId } = this.props.match.params;
     if (this.state.deleteRequested === false) {
       return (
-        <div className="single-product-card">
-          <div className="single-product-container">
-            <h2 className="single-product-name">{entry.title}</h2>
-            <h2>{entry.date}</h2>
+        <div className="single-entry-card">
+          <div className="single-entry-container">
+            <h2 className="single-entry-title">{entry.title}</h2>
+            <h3>Date: {entry.date}</h3>
             <h3>Time: {entry.minutes} minutes</h3>
             <div>
               {entry.type === 'boulder' ? (
                 <div>
-                  <ul>
+                  <ul className="single-grades-container">
                     <li>Red Point: V{entry.boulderRedPoint}</li>
                     <li>On-site: V{entry.boulderOnSite}</li>
                     <li>Project: V{entry.boulderProject}</li>
@@ -53,7 +53,7 @@ export class SingleEntry extends React.Component {
                 </div>
               ) : (
                 <div>
-                  <ul>
+                  <ul className="single-grades-container">
                     <li>Red Point: {entry.sportRedPoint}</li>
                     <li>On-site: {entry.sportOnSite}</li>
                     <li>Project: {entry.sportProject}</li>
@@ -61,21 +61,28 @@ export class SingleEntry extends React.Component {
                 </div>
               )}
             </div>
-            <p>{entry.location}</p>
-            <p>{entry.shoes}</p>
-            <p>{entry.notes}</p>
+            <p>Location: {entry.location}</p>
+            <p>Shoes: {entry.shoes}</p>
+            <p>Notes: {entry.notes}</p>
           </div>
-          <div>
-            <button type="button" onClick={() => this.onEditClick()}>
+          <div className="single-entry-buttons">
+            <button
+              type="button"
+              className="login-cta"
+              onClick={() => this.onEditClick()}
+            >
               Edit Entry
             </button>
             {this.state.editRequested ? <EditEntry /> : ''}
           </div>
           <div>
-            <button type="button" onClick={() => this.onDeleteClick()}>
+            <button
+              type="button"
+              className="login-cta"
+              onClick={() => this.onDeleteClick()}
+            >
               Delete Entry
             </button>
-            {/* <EditEntry /> */}
           </div>
         </div>
       );
@@ -86,6 +93,7 @@ export class SingleEntry extends React.Component {
             <h2>Are you sure you want to delete this entry?</h2>
             <button
               type="button"
+              className="login-cta"
               onClick={() => {
                 this.props.deleteEntry(userId, entry.id);
                 this.deleted();
@@ -93,7 +101,12 @@ export class SingleEntry extends React.Component {
             >
               Delete Entry
             </button>
-            <Link to={`/journal/${userId}/${entry.id}`}>Cancel</Link>
+            <a
+              className="cancel-cta"
+              href={`/journal/${this.props.userId}/${this.props.entry.id}`}
+            >
+              Cancel
+            </a>
           </div>
         );
       } else {

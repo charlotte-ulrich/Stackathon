@@ -70,7 +70,7 @@ export class Home extends React.Component {
             </div>
             <div className="developer-container">
               <div>
-                <h5>Charlotte Ulrich</h5>
+                <h5>Developed by: Charlotte Ulrich</h5>
               </div>
 
               <a

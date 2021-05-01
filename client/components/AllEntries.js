@@ -13,6 +13,7 @@ export class AllEntries extends React.Component {
     const { userId } = this.props.match.params;
     return (
       <div className="all-entries-page">
+        <h1 className="page-title">Your Journal</h1>
         <div>
           {entriesArr !== undefined && entriesArr.length > 0 ? (
             <ul className="all-entries-view">
@@ -41,7 +42,17 @@ export class AllEntries extends React.Component {
               })}
             </ul>
           ) : (
-            <h2>Journal loading</h2>
+            <div>
+              <Link to={`/journal/${userId}/new-entry`}>
+                <div className="entry-card">
+                  <h2 className="new-entry-link">New Entry</h2>
+                  <img
+                    src="https://www.pngkey.com/png/full/115-1152868_png-white-plus-sign-vector-transparent-library-plus.png"
+                    className="new-entry-img"
+                  />
+                </div>
+              </Link>
+            </div>
           )}
         </div>
       </div>

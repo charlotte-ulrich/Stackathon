@@ -72,7 +72,12 @@ export class EditEntry extends React.Component {
           </p>
           <p>
             <label>Type:</label>
-            <select name="type" onChange={handleChange} value={type}>
+            <select
+              className="custom-select"
+              name="type"
+              onChange={handleChange}
+              value={type}
+            >
               <option value="sport">Sport</option>
               <option value="boulder">Bouldering</option>
             </select>
@@ -82,6 +87,7 @@ export class EditEntry extends React.Component {
               <p>
                 <label>Boulder Red Point:</label>
                 <select
+                  className="custom-select"
                   name="boulderRedPoint"
                   onChange={handleChange}
                   value={boulderRedPoint}
@@ -101,8 +107,9 @@ export class EditEntry extends React.Component {
                 </select>
               </p>
               <p>
-                <label>Boulder OnSite:</label>
+                <label>Boulder On-Site:</label>
                 <select
+                  className="custom-select"
                   name="boulderOnSite"
                   onChange={handleChange}
                   value={boulderOnSite}
@@ -124,6 +131,7 @@ export class EditEntry extends React.Component {
               <p>
                 <label>Boulder Project:</label>
                 <select
+                  className="custom-select"
                   name="boulderProject"
                   onChange={handleChange}
                   value={boulderProject}
@@ -148,6 +156,7 @@ export class EditEntry extends React.Component {
               <p>
                 <label>Sport Red Point:</label>
                 <select
+                  className="custom-select"
                   name="sportRedPoint"
                   onChange={handleChange}
                   value={sportRedPoint}
@@ -165,8 +174,9 @@ export class EditEntry extends React.Component {
                 </select>
               </p>
               <p>
-                <label>Sport OnSite:</label>
+                <label>Sport On-Site:</label>
                 <select
+                  className="custom-select"
                   name="sportOnSite"
                   onChange={handleChange}
                   value={sportOnSite}
@@ -186,6 +196,7 @@ export class EditEntry extends React.Component {
               <p>
                 <label>Sport Project:</label>
                 <select
+                  className="custom-select"
                   name="sportProject"
                   onChange={handleChange}
                   value={sportProject}
@@ -214,10 +225,15 @@ export class EditEntry extends React.Component {
           </p>
           <div className="admin-button-container">
             <div className="edit-cta">
-              <button type="submit">Submit</button>
+              <button className="login-cta" type="submit">
+                Submit
+              </button>
             </div>
             <div>
-              <a href={`/journal/${this.props.userId}/${this.props.entry.id}`}>
+              <a
+                className="cancel-cta"
+                href={`/journal/${this.props.userId}/${this.props.entry.id}`}
+              >
                 Cancel
               </a>
             </div>
