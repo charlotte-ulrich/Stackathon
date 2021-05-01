@@ -11,6 +11,13 @@ export const setEntries = (entries) => {
   };
 };
 
+export const setEntriesStats = (entries) => {
+  return {
+    type: SET_ENTRIES,
+    entries,
+  };
+};
+
 export const createEntry = (createdEntry) => {
   return {
     type: CREATE_ENTRY,
@@ -33,6 +40,17 @@ export const fetchCreateEntry = (userId, entry) => {
   return async (dispatch) => {
     const { data } = await axios.post(`/api/journal/${userId}`, entry);
     dispatch(createEntry(data));
+  };
+};
+
+export const fetchEntriesStats = (userId) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get(`/api/journal/${userId}/stats`);
+      dispatch(setEntries(data));
+    } catch (err) {
+      console.log(err);
+    }
   };
 };
 

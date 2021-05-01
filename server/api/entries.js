@@ -10,6 +10,22 @@ router.get('/:userId', async (req, res, next) => {
       where: {
         userId,
       },
+      order: [['date', 'DESC']],
+    });
+    res.json(allEntries);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get('/:userId/stats', async (req, res, next) => {
+  try {
+    const { userId } = req.params;
+    const allEntries = await Entry.findAll({
+      where: {
+        userId,
+      },
+      order: [['date', 'ASC']],
     });
     res.json(allEntries);
   } catch (err) {

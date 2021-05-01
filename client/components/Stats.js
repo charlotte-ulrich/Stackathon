@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchEntries } from '../store/redux/allEntries';
+import { fetchEntriesStats } from '../store/redux/allEntries';
 import { Link } from 'react-router-dom';
 import {
   LineChart,
@@ -19,6 +19,8 @@ export class Stats extends React.Component {
   render() {
     const entries = this.props.entries;
     const minutesArr = entries.map((entry) => entry.minutes);
+    const locationsArr = entries.map((entry) => entry.location);
+    const uniqueLocations = [...new Set(locationsArr)];
     return (
       <div>
         <div>
@@ -29,19 +31,15 @@ export class Stats extends React.Component {
         </div>
         <div>
           <h1>Where You Climb:</h1>
-          <PieChart width={730} height={250}>
-            <Pie
-              data={entries}
-              dataKey="locations"
-              nameKey="locations"
-              cx="50%"
-              cy="50%"
-              innerRadius={60}
-              outerRadius={80}
-              fill="#82ca9d"
-              label
-            />
-          </PieChart>
+          <div>
+            {uniqueLocations.map((location) => {
+              return (
+                <div>
+                  <h3>{location}</h3>
+                </div>
+              );
+            })}{' '}
+          </div>
         </div>
         <div>
           <h1>Boulder Red Point</h1>
@@ -111,7 +109,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, { history }) => {
   return {
-    getEntries: (userId) => dispatch(fetchEntries(userId)),
+    getEntries: (userId) => dispatch(fetchEntriesStats(userId)),
   };
 };
 

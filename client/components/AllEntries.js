@@ -12,25 +12,34 @@ export class AllEntries extends React.Component {
     const entriesArr = this.props.entries;
     const { userId } = this.props.match.params;
     return (
-      <div>
-        <div>
-          <Link to={`/journal/${userId}/new-entry`}>New Entry</Link>
-        </div>
+      <div className="all-entries-page">
         <div>
           {entriesArr !== undefined && entriesArr.length > 0 ? (
-            <div>
+            <ul className="all-entries-view">
+              <Link to={`/journal/${userId}/new-entry`}>
+                <div className="entry-card">
+                  <h2 className="new-entry-link">New Entry</h2>
+                  <img
+                    src="https://www.pngkey.com/png/full/115-1152868_png-white-plus-sign-vector-transparent-library-plus.png"
+                    className="new-entry-img"
+                  />
+                </div>
+              </Link>
+
               {entriesArr.map((entry) => {
                 return (
-                  <div key={entry.id} className="flex-item">
+                  <div>
                     <Link to={`/journal/${userId}/${entry.id}`}>
-                      <h2>{entry.date}</h2>
-                      <h3>{entry.title}</h3>
+                      <div key={entry.id} className="entry-card">
+                        <h2 className="entry-title">{entry.title}</h2>
+                        <h3 className="entry-details">{entry.date}</h3>
+                        <h3 className="entry-details">{entry.location}</h3>
+                      </div>
                     </Link>
-                    <p>{entry.location}</p>
                   </div>
                 );
               })}
-            </div>
+            </ul>
           ) : (
             <h2>Journal loading</h2>
           )}

@@ -47,7 +47,7 @@ export class SingleEntry extends React.Component {
                 <div>
                   <ul>
                     <li>Red Point: V{entry.boulderRedPoint}</li>
-                    <li>On site: V{entry.boulderOnSite}</li>
+                    <li>On-site: V{entry.boulderOnSite}</li>
                     <li>Project: V{entry.boulderProject}</li>
                   </ul>
                 </div>
@@ -55,7 +55,7 @@ export class SingleEntry extends React.Component {
                 <div>
                   <ul>
                     <li>Red Point: {entry.sportRedPoint}</li>
-                    <li>On site: {entry.sportOnSite}</li>
+                    <li>On-site: {entry.sportOnSite}</li>
                     <li>Project: {entry.sportProject}</li>
                   </ul>
                 </div>
