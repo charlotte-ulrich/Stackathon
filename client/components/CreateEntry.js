@@ -169,10 +169,10 @@ export class CreateEntry extends React.Component {
                   value={sportRedPoint}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="5.6">5.6</option>
-                  <option value="5.7">5.7</option>
-                  <option value="5.8">5.8</option>
-                  <option value="5.9">5.9</option>
+                  <option value="5.06">5.6</option>
+                  <option value="5.07">5.7</option>
+                  <option value="5.08">5.8</option>
+                  <option value="5.09">5.9</option>
                   <option value="5.10">5.10</option>
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>
@@ -189,10 +189,10 @@ export class CreateEntry extends React.Component {
                   value={sportOnSite}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="5.6">5.6</option>
-                  <option value="5.7">5.7</option>
-                  <option value="5.8">5.8</option>
-                  <option value="5.9">5.9</option>
+                  <option value="5.06">5.6</option>
+                  <option value="5.07">5.7</option>
+                  <option value="5.08">5.8</option>
+                  <option value="5.09">5.9</option>
                   <option value="5.10">5.10</option>
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>
@@ -209,10 +209,10 @@ export class CreateEntry extends React.Component {
                   value={sportProject}
                 >
                   <option value="chooseOne">Choose One</option>
-                  <option value="5.6">5.6</option>
-                  <option value="5.7">5.7</option>
-                  <option value="5.8">5.8</option>
-                  <option value="5.9">5.9</option>
+                  <option value="5.06">5.6</option>
+                  <option value="5.07">5.7</option>
+                  <option value="5.08">5.8</option>
+                  <option value="5.09">5.9</option>
                   <option value="5.10">5.10</option>
                   <option value="5.11">5.11</option>
                   <option value="5.12">5.12</option>

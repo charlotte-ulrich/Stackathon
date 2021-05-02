@@ -90,10 +90,10 @@ export class Stats extends React.Component {
                   type="number"
                   domain={[5, 5.2]}
                   ticks={[
-                    '5.6',
-                    '5.7',
-                    '5.8',
-                    '5.9',
+                    '5.06',
+                    '5.07',
+                    '5.08',
+                    '5.09',
                     '5.1',
                     '5.11',
                     '5.12',
@@ -129,10 +129,10 @@ export class Stats extends React.Component {
                   type="number"
                   domain={[5, 5.2]}
                   ticks={[
-                    '5.6',
-                    '5.7',
-                    '5.8',
-                    '5.9',
+                    '5.06',
+                    '5.07',
+                    '5.08',
+                    '5.09',
                     '5.1',
                     '5.11',
                     '5.12',
@@ -168,10 +168,10 @@ export class Stats extends React.Component {
                   type="number"
                   domain={[5, 5.2]}
                   ticks={[
-                    '5.6',
-                    '5.7',
-                    '5.8',
-                    '5.9',
+                    '5.06',
+                    '5.07',
+                    '5.08',
+                    '5.09',
                     '5.1',
                     '5.11',
                     '5.12',
