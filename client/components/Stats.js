@@ -10,6 +10,7 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
+  AxisLabel,
 } from 'recharts';
 import Aos from 'aos';
 
@@ -23,6 +24,14 @@ export class Stats extends React.Component {
     const minutesArr = entries.map((entry) => entry.minutes);
     const locationsArr = entries.map((entry) => entry.location);
     const uniqueLocations = [...new Set(locationsArr)];
+    const boulderFormatter = (value) => `V${value}`;
+    // const dateFormatter = (tickItem) => {
+    //   return moment(tickItem).format('MMM YY');
+    // };
+    // const formatXAxis = (tickItem) => {
+    //   return tickItem.toLocaleDateString();
+    // };
+
     return (
       <div className="all-stats-page">
         <h1 className="page-title">Your Stats</h1>
@@ -56,11 +65,14 @@ export class Stats extends React.Component {
                 <Line
                   type="monotone"
                   dataKey="boulderRedPoint"
-                  stroke="#8884d8"
+                  stroke="#FF00F6"
                 />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis
+                  dataKey="boulderRedPoint"
+                  tickFormatter={boulderFormatter}
+                />
               </LineChart>
             </div>
             <div className="chart-card" data-aos="fade-up">
@@ -69,11 +81,28 @@ export class Stats extends React.Component {
                 <Line
                   type="monotone"
                   dataKey="sportRedPoint"
-                  stroke="#8884d8"
+                  stroke="#FF00F6"
                 />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis
+                  dataKey="sportRedPoint"
+                  type="number"
+                  domain={[5, 5.2]}
+                  ticks={[
+                    '5.6',
+                    '5.7',
+                    '5.8',
+                    '5.9',
+                    '5.1',
+                    '5.11',
+                    '5.12',
+                    '5.13',
+                    '5.14',
+                  ]}
+                  tickCount={9}
+                  interval={'preserveStartEnd'}
+                />
               </LineChart>
             </div>
             <div className="chart-card" data-aos="fade-up">
@@ -82,20 +111,37 @@ export class Stats extends React.Component {
                 <Line
                   type="monotone"
                   dataKey="boulderOnSite"
-                  stroke="#8884d8"
+                  stroke="#FF00F6"
                 />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis tickFormatter={boulderFormatter} />
               </LineChart>
             </div>
             <div className="chart-card" data-aos="fade-up">
               <h1 className="chart-title">Sport On-Site</h1>
               <LineChart width={400} height={400} data={entries}>
-                <Line type="monotone" dataKey="sportOnSite" stroke="#8884d8" />
+                <Line type="monotone" dataKey="sportOnSite" stroke="#FF00F6" />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis
+                  dataKey="sportOnSite"
+                  type="number"
+                  domain={[5, 5.2]}
+                  ticks={[
+                    '5.6',
+                    '5.7',
+                    '5.8',
+                    '5.9',
+                    '5.1',
+                    '5.11',
+                    '5.12',
+                    '5.13',
+                    '5.14',
+                  ]}
+                  tickCount={9}
+                  interval={'preserveStartEnd'}
+                />
               </LineChart>
             </div>
             <div className="chart-card" data-aos="fade-up">
@@ -104,20 +150,37 @@ export class Stats extends React.Component {
                 <Line
                   type="monotone"
                   dataKey="boulderProject"
-                  stroke="#8884d8"
+                  stroke="#FF00F6"
                 />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis tickFormatter={boulderFormatter} />
               </LineChart>
             </div>
             <div className="chart-card" data-aos="fade-up">
               <h1 className="chart-title">Sport Project</h1>
               <LineChart width={400} height={400} data={entries}>
-                <Line type="monotone" dataKey="sportProject" stroke="#8884d8" />
+                <Line type="monotone" dataKey="sportProject" stroke="#FF00F6" />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="date" />
-                <YAxis />
+                <YAxis
+                  dataKey="sportProject"
+                  type="number"
+                  domain={[5, 5.2]}
+                  ticks={[
+                    '5.6',
+                    '5.7',
+                    '5.8',
+                    '5.9',
+                    '5.1',
+                    '5.11',
+                    '5.12',
+                    '5.13',
+                    '5.14',
+                  ]}
+                  tickCount={9}
+                  interval={'preserveStartEnd'}
+                />
               </LineChart>
             </div>
           </div>

@@ -248,7 +248,7 @@ const userThreeEntries = [
   {
     location: 'First Ascent Humboldt Park',
     type: 'boulder',
-    date: '2020-01-20',
+    date: '2020-10-20',
     boulderRedPoint: 5,
     boulderOnSite: 5,
     boulderProject: 7,

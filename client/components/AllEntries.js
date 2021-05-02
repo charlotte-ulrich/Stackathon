@@ -17,7 +17,7 @@ export class AllEntries extends React.Component {
         <div>
           {entriesArr !== undefined && entriesArr.length > 0 ? (
             <ul className="all-entries-view">
-              <Link to={`/journal/${userId}/new-entry`}>
+              <a href={`/journal/${userId}/new-entry`}>
                 <div className="entry-card">
                   <h2 className="new-entry-link">New Entry</h2>
                   <img
@@ -25,18 +25,18 @@ export class AllEntries extends React.Component {
                     className="new-entry-img"
                   />
                 </div>
-              </Link>
+              </a>
 
               {entriesArr.map((entry) => {
                 return (
                   <div>
-                    <Link to={`/journal/${userId}/${entry.id}`}>
+                    <a href={`/journal/${userId}/${entry.id}`}>
                       <div key={entry.id} className="entry-card">
                         <h2 className="entry-title">{entry.title}</h2>
                         <h3 className="entry-details">{entry.date}</h3>
                         <h3 className="entry-details">{entry.location}</h3>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 );
               })}

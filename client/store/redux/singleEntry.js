@@ -1,5 +1,6 @@
 import axios from 'axios';
 const initialState = [];
+const TOKEN = 'token';
 
 const GET_SINGLE_ENTRY = 'GET_SINGLE_ENTRY';
 const EDIT_ENTRY = 'EDIT_ENTRY';
@@ -28,8 +29,13 @@ export const deleteEntry = (deletingEntry) => {
 
 export const fetchSingleEntry = (userId, entryId) => {
   return async (dispatch) => {
+    const token = window.localStorage.getItem(TOKEN);
     try {
-      const { data } = await axios.get(`/api/journal/${userId}/${entryId}`);
+      const { data } = await axios.get(`/api/journal/${userId}/${entryId}`, {
+        headers: {
+          authorization: token,
+        },
+      });
       dispatch(getSingleEntry(data));
     } catch (err) {
       console.log(err);
@@ -39,9 +45,15 @@ export const fetchSingleEntry = (userId, entryId) => {
 
 export const fetchEditEntry = (userId, entryId, entry) => {
   return async (dispatch) => {
+    const token = window.localStorage.getItem(TOKEN);
     const { data } = await axios.put(
       `/api/journal/${userId}/${entryId}`,
-      entry
+      entry,
+      {
+        headers: {
+          authorization: token,
+        },
+      }
     );
     dispatch(editEntry(data));
   };
@@ -49,9 +61,15 @@ export const fetchEditEntry = (userId, entryId, entry) => {
 
 export const fetchDeleteEntry = (userId, entryId, entry) => {
   return async (dispatch) => {
+    const token = window.localStorage.getItem(TOKEN);
     const { data } = await axios.delete(
       `/api/journal/${userId}/${entryId}`,
-      entry
+      entry,
+      {
+        headers: {
+          authorization: token,
+        },
+      }
     );
     dispatch(deleteEntry(data));
   };
