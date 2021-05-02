@@ -25,12 +25,6 @@ export class Stats extends React.Component {
     const locationsArr = entries.map((entry) => entry.location);
     const uniqueLocations = [...new Set(locationsArr)];
     const boulderFormatter = (value) => `V${value}`;
-    // const dateFormatter = (tickItem) => {
-    //   return moment(tickItem).format('MMM YY');
-    // };
-    // const formatXAxis = (tickItem) => {
-    //   return tickItem.toLocaleDateString();
-    // };
 
     return (
       <div className="all-stats-page">
