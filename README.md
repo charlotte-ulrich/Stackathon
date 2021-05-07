@@ -4,6 +4,7 @@
 2. Author: Charlotte Ulrich
 3. https://ascent-journal.herokuapp.com/
 4. You are welcome to create your own account. To interact with an account with existing journal entries, login as username: charlotteu, password: password1
+5. This journal uses Node.js, Express, Sequelize, React/Redux, HTML/CSS, Animate on Scroll, and Rechart.js 
 
 ## Start
 
