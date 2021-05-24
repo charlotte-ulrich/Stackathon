@@ -2,7 +2,7 @@
 \
 Climb higher and harder with the Ascent climbing journal, used for logging climbing sessions and tracking grade progress over time. \
 \
-Author: Charlotte Ulrich\
+Author: Charlotte Ulrich - https://www.linkedin.com/in/charlotteulrich/ \
 \
 Check out the app at https://ascent-journal.herokuapp.com/ \
 You are welcome to create your own account and begin logging your progress. Your data will be kept secure through BCrypt password hashing. To explore the full functionality through an account with existing journal entries, login as username: charlotteu, password: password1\
@@ -20,3 +20,4 @@ Run node seed.js\
 Finally run npm run start:dev to make great things happen!
 
 
+Thank you to the Grace Hopper staff at Fullstack Academy!
