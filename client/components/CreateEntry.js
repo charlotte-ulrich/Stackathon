@@ -1,7 +1,6 @@
 import React from 'react';
 import { fetchCreateEntry } from '../store/redux/allEntries';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 export class CreateEntry extends React.Component {
   constructor(props) {
@@ -252,7 +251,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, { history }) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     createEntry: (userId, entry) => dispatch(fetchCreateEntry(userId, entry)),
   };

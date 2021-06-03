@@ -191,7 +191,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, { history }) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     getEntries: (userId) => dispatch(fetchEntriesStats(userId)),
   };

@@ -11,9 +11,6 @@ import EditEntry from './components/EditEntry';
 import CreateEntry from './components/CreateEntry';
 import Stats from './components/Stats';
 
-/**
- * COMPONENT
- */
 class Routes extends Component {
   componentDidMount() {
     this.props.loadInitialData();
@@ -28,7 +25,6 @@ class Routes extends Component {
             <main>
               <Switch>
                 <Route exact path="/" component={Home} />
-                {/* <Redirect to="/" /> */}
                 <Route exact path="/journal/:userId" component={AllEntries} />
                 <Route exact path="/journal/:userId/stats" component={Stats} />
                 <Route
@@ -58,9 +54,6 @@ class Routes extends Component {
   }
 }
 
-/**
- * CONTAINER
- */
 const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id,
@@ -75,6 +68,4 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
 export default withRouter(connect(mapState, mapDispatch)(Routes));

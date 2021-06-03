@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchEntries } from '../store/redux/allEntries';
 import { Link } from 'react-router-dom';
-import { CreateEntry } from './CreateEntry';
 
 export class AllEntries extends React.Component {
   componentDidMount() {
@@ -67,7 +66,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, { history }) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     getEntries: (userId) => dispatch(fetchEntries(userId)),
   };

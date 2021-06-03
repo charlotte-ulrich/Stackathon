@@ -20,7 +20,6 @@ const Entry = db.define('entry', {
   },
   sportRedPoint: {
     type: Sequelize.FLOAT(3, 2),
-    // min/max and set interval for numbers
   },
   boulderRedPoint: {
     type: Sequelize.INTEGER,

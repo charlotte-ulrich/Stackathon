@@ -1,13 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import AllEntries from './AllEntries';
 import { Login, Signup } from './AuthForm';
 import Aos from 'aos';
 
-/**
- * COMPONENT
- */
 export class Home extends React.Component {
   componentDidMount() {
     Aos.init({ duration: 2000 });
@@ -163,9 +159,6 @@ export class Home extends React.Component {
   }
 }
 
-/**
- * CONTAINER
- */
 const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id,

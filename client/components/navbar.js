@@ -55,9 +55,6 @@ const Navbar = ({ handleClick, isLoggedIn, userId }) => (
   </div>
 );
 
-/**
- * CONTAINER
- */
 const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id,
